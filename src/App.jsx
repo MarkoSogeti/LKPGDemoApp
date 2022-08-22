@@ -6,7 +6,7 @@ import {createSignal, onMount} from "solid-js";
 function App() {
   const [userInfo, setUserInfo] = createSignal("");
   onMount(async () => {
-    await getUserInfo().then((res) => {setUserInfo(res); console.log(userInfo()); console.log("HEJ!"); });
+    await getUserInfo().then((res) => {setUserInfo(res)});
   });
   return (
       <div class={styles.App}>
